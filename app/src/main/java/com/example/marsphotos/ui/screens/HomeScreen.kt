@@ -101,6 +101,15 @@ fun MarsPhotoCard(photo: MarsPhoto, modifier: Modifier = Modifier) {
     }
 }
 
+@Preview(showBackground = true)
+@Composable
+fun PhotosGridScreenPreview() {
+    MarsPhotosTheme {
+        val mockData = List(10) { MarsPhoto("$it", "") }
+        PhotosGridScreen(mockData)
+    }
+}
+
 @Composable
 fun PhotosGridScreen(photos: List<MarsPhoto>, modifier: Modifier = Modifier) {
     LazyVerticalGrid(
@@ -145,7 +154,7 @@ fun ResultScreen(photos: String, modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(showBackground = true)
+
 @Composable
 fun LoadingScreenPreview() {
     MarsPhotosTheme {
@@ -153,7 +162,7 @@ fun LoadingScreenPreview() {
     }
 }
 
-@Preview(showBackground = true)
+
 @Composable
 fun ErrorScreenPreview() {
     MarsPhotosTheme {
@@ -161,7 +170,7 @@ fun ErrorScreenPreview() {
     }
 }
 
-@Preview(showBackground = true)
+
 @Composable
 fun ResultScreenPreview() {
     MarsPhotosTheme {
